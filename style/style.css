@@ -11,6 +11,12 @@ body{
 ul {
     list-style: none;
   }
+  @media  screen and (max-width: 767px) {
+    .head{
+        height: 750px;
+        background-position: center;
+    }
+  }
 header a{
     width: 120px;
     padding: 10px;
@@ -38,10 +44,6 @@ header nav ul li{
     color: #212529;
     padding: 30px;
 }
-header nav ul li:link{
-    text-decoration: none;
-    color: #0096c7;
-}
 header nav ul li:hover{
     font-weight: 600;
 }
@@ -50,12 +52,13 @@ header nav ul li:hover{
     height: 10px;
     width: 100%;
   }
-#MdP{
+#mdp{
     width: auto;
     height: 500px;
     background-image: url(../imagenes/mardel3.png);
     background-size: cover;
 }
+
 .titulo{
     color: aliceblue;
     text-shadow: 0 0 9px rgb(58, 50, 50);
@@ -175,5 +178,22 @@ footer ul li{
 }
 
 /*
-Informacion general
+INFORMACION GENERAL
 */
+.infoTitulo{
+    text-align: center;
+    color: #0096c7;
+    font-size: 32px;
+    margin-top: 30px;
+}
+.info-body{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto auto auto auto;
+}
+.img-info1{
+    grid-area: img-info1;
+}
+.text-info1{
+    grid-area: text-info1;
+}
