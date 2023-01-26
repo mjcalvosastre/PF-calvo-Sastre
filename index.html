@@ -11,31 +11,89 @@
     <link rel="Actividades" href="informacion/actindex.html">
     <link rel="Historia" href="historiaindex.html">
     <link rel="Noticias" href="noticiasindex.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- HEAD -->
-    <header id="head">
-        <a href="index.html"><img src="imagenes/mgp.foto.png" alt="MGP"> </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="infoindex.html">Información</a></li>
-                <li><a href="actindex.html">Actividades</a></li>
-                <li><a href="historiaindex.html">Historia</a></li>
-                <li><a href="noticiasindex.html">Noticias</a></li>
-            </ul>
-        </nav>
+    <!-- Barra Nav. -->
+    <header class="navbar navbar-expand-lg bg-light sticky-top header">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="header__logo logo"
+                    src="imagenes/mgp.foto.png" alt="MGP" title="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav justify-content-around gap-3">
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info">
+                        <a class="nav-link header__a--nav active-link" aria-current="page"
+                            href="index.html">Inicio</a></button>
+                    </li>
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info">
+                        <a class="nav-link header__a--nav" href="infoindex.html">Información</a></button>
+                    </li>
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info">
+                        <a class="nav-link header__a--nav" href="actindex.html">Actividades</a></button>
+                    </li>
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info">
+                        <a class="nav-link header__a--nav" href="historiaindex.html">Historia</a></button>
+                    </li>
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info">
+                        <a class="nav-link header__a--nav" href="noticiasindex.html">Noticias</a></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <div class="split"></div>
     <!-- PORTADA -->
-    <main id="mdp">
-        <p class="titulo">Mar del Plata</p>
+    <!-- Carousel -->
+    <main class="carrusel-1">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="imagenes/mardel3.png" class="d-block w-100" alt="Mar del Plata">
+                <div class="carousel-caption top-0 mt-5">
+                    <h5 class="titulo-carrusel">Mar del Plata</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagenes/carrusel2.jpeg" class="d-block w-100" alt="Mar del Plata">
+                <div class="carousel-caption top-0 mt-5">
+                    <h5 class="titulo-carrusel">Mar del Plata</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagenes/carrusel3.jpeg" class="d-block w-100" alt="Mar del Plata">
+                <div class="carousel-caption top-0 mt-5">
+                    <h5 class="titulo-carrusel">Mar del Plata</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </main>
-     <!-- subtitulos -->
+    <!-- BODY -->
     <h3 id="hacer">¿Que hacer?</h3>
-    <main id="que-hacer">
-        <nav id="surf">
+    <main id="que-hacer" class="container">
+        <nav id="surf" >
             <p class="tit-hacer">Recreación</p>
             <img class="img-hacer" src="imagenes/act1.jpeg" alt="Surf">
             <p class="texto-hacer">Disfruta de los escenarios naturales<br>que Mar del Plata para hacer
@@ -60,7 +118,7 @@
                 propuesta<br>gastronomica de primer nivel y para todos los gustos</p>
         </nav>
     </main>
-     <!--  subtitulos -->
+    <!--  BODY -->
     <h3 class="info">Información General</h3>
     <main id="info-general">
         <nav id="como-llego">
@@ -82,7 +140,7 @@
                 alquiler de bicicletas<br>y agencias de alquiler de autos.</p>
         </nav>
     </main>
-     <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer id="contacto">
         <div id="seccion-contacto">
             <h3 class="cont">Contacto</h3>
@@ -95,14 +153,14 @@
         <div id="seccion-redes">
             <h3 class="redes">Redes</h3>
             <div class="redes-iconos">
-                <div><a href="https://es-la.facebook.com/MardelPlataok/"><img src="imagenes/facebook.png" alt="Facebook" width="30px"
-                    height="30px"></a> </div>
+                <div><a href="https://es-la.facebook.com/MardelPlataok/"><img src="imagenes/facebook.png" alt="Facebook"
+                            width="30px" height="30px"></a> </div>
                 <div><a href="https://twitter.com/mardelplata?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img
-                    src="imagenes/twitter.png" alt="Twitter" width="30px" height="30px"></a> </div>
-                <div><a href="https://www.instagram.com/mardelplataarg/?hl=es"><img src="imagenes/instagram.jpeg" alt="Instagram"
-                    width="30px" height="30px"></a> </div>
-                <div><a href="https://www.youtube.com/user/PrensaEmtur?app=desktop"><img
-                    src="imagenes/youtube.png" alt="Youtube" width="30px" height="30px"></a></div>
+                            src="imagenes/twitter.png" alt="Twitter" width="30px" height="30px"></a> </div>
+                <div><a href="https://www.instagram.com/mardelplataarg/?hl=es"><img src="imagenes/instagram.jpeg"
+                            alt="Instagram" width="30px" height="30px"></a> </div>
+                <div><a href="https://www.youtube.com/user/PrensaEmtur?app=desktop"><img src="imagenes/youtube.png"
+                            alt="Youtube" width="30px" height="30px"></a></div>
             </div>
         </div>
     </footer>

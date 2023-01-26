@@ -12,38 +12,93 @@
     <link rel="Historia" href="historiaindex.html">
     <link rel="Noticias" href="noticiasindex.html">
     <title>Información General</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- HEAD -->
-    <header id="head">
-        <a href="index.html"><img src="imagenes/mgp.foto.png" alt="MGP"> </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="infoindex.html">Información</a></li>
-                <li><a href="actindex.html">Actividades</a></li>
-                <li><a href="historiaindex.html">Historia</a></li>
-                <li><a href="noticiasindex.html">Noticias</a></li>
-            </ul>
-        </nav>
+    <!-- Barra Nav. -->
+    <header class="navbar navbar-expand-lg bg-light sticky-top header">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="header__logo logo"
+                    src="imagenes/mgp.foto.png" alt="MGP" title="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav justify-content-around gap-3">
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info">
+                        <a class="nav-link header__a--nav active-link" aria-current="page"
+                            href="index.html">Inicio</a></button>
+                    </li>
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info" >
+                        <a class="nav-link header__a--nav" href="infoindex.html">Información</a></button>
+                    </li>
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info">
+                        <a class="nav-link header__a--nav" href="actindex.html">Actividades</a></button>
+                    </li>
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info">
+                        <a class="nav-link header__a--nav" href="historiaindex.html">Historia</a></button>
+                    </li>
+                    <li class="nav-item"><button type="buttom" class="btn btn-outline-info">
+                        <a class="nav-link header__a--nav" href="noticiasindex.html">Noticias</a></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="split"></div>
+<div class="split"></div>
   <!-- PORTADA -->
-    <main id="mdp">
-        <p class="titulo">Mar del Plata</p>
+    <!-- Carousel -->
+    <main class="carrusel-1">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="imagenes/mardel3.png" class="d-block w-100" alt="Mar del Plata">
+                <div class="carousel-caption top-0 mt-5">
+                    <h5 class="titulo-carrusel">Mar del Plata</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagenes/carrusel2.jpeg" class="d-block w-100" alt="Mar del Plata">
+                <div class="carousel-caption top-0 mt-5">
+                    <h5 class="titulo-carrusel">Mar del Plata</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagenes/carrusel3.jpeg" class="d-block w-100" alt="Mar del Plata">
+                <div class="carousel-caption top-0 mt-5">
+                    <h5 class="titulo-carrusel">Mar del Plata</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </main>
  <!-- subtitulos -->
     <main>
         <h3 class="infoTitulo">Información</h3>
     </main>
-    <main id="info-body">
-        <section id="info-info">
-            <div class="img-info1">
-                <img src="imagenes/info1.jpeg" alt="Lobos" width="270px" height="150px">
+    <main class="container">    
+        <div class="row">
+            <div  class="col-4">
+                <img src="imagenes/info1.jpeg" alt="Lobos" width="270px" height="170px">
             </div>
-            <div class="text-info1">
-                <h4>Informaión general</h4>
-                <p>Mar del Plata es una ciudad ubicada en el sudeste de la provincia de Buenos Aires, Argentina, sobre la costa
+            <div class="col-8">
+                <h4 class="titulo-informacion">Informaión general</h4>
+                <p class="texto-info">Mar del Plata es una ciudad ubicada en el sudeste de la provincia de Buenos Aires, Argentina, sobre la costa
                     del mar argentino. Es la cabecera del partido de General Pueyrredón, un importante puerto y balneario y el
                     segundo destino turístico del país después de Buenos Aires. En época de verano su población puede aumentar
                     en alrededor de un 301 %, por lo que cuenta con una gran oferta de infraestructura de hoteles y otros
@@ -54,62 +109,69 @@
                     naval de submarinos. Entre la gran variedad de industrias, se destacan también las derivadas de la
                     horticultura, la construcción, la metalúrgica y la mecánica.</p>
             </div>
-        </section>
-        <section id="info-comoLlego">
-            <div class="img-info2">
-                <img src="imagenes/comollego.png" alt="Mapa" width="270px" height="150px">
+        </div>
+        <div class="split-info" ></div>
+        <div class="row">  
+            <div class="col-4">
+                <img src="imagenes/comollego.png" alt="Mapa" width="270px" height="170px">
             </div>
-            <div class="text-info2">
-                <h4>¿Como llego?</h4>
-                <p>El Partido de General Pueyrredon, cuya ciudad cabecera es Mar del Plata, se encuentra situado sobre el Océano
-                    Atlántico, en la zona sudeste de la provincia de Buenos Aires.</p>
-                <p>En Ferrocarril:<br>En tren se llega a la Estación Terminal Ferroautomotora María Eva Duarte de Perón. El viaje desde la Estación
-                    Constitución tiene una duración de 6 horas aproximadamente</p>
-                <p>En Micros de larga distancia:<br>Los ómnibus de larga distancia llegan a la Estación Terminal Ferroautomotora María Eva Duarte de Perón. El
-                    viaje desde la Estación Terminal de Retiro tiene una duración de 5 horas aproximadamente.</p>
-                <p>En Avión:<br>Por vía aérea se arriba al Aeropuerto Internacional Ástor Piazzolla. El vuelo desde la Ciudad Autónoma de
-                    Buenos Aires tiene una duración de 45 minutos.</p>
-                <p>En automóvil:<br>La Autovía 2 conecta La Ciudad Autónoma de Buenos Aires con Mar del Plata en cinco horas, aproximadamente.
-                    Las rutas 11, 88 y 226 también vinculan Mar del Plata con Buenos Aires y el resto del país.</p>
+            <div class="col-8">
+                <h4 class="titulo-informacion">¿Como llego?</h4>
+                <div class="texto-info">
+                    <p>El Partido de General Pueyrredon, cuya ciudad cabecera es Mar del Plata, se encuentra situado sobre el Océano
+                        Atlántico, en la zona sudeste de la provincia de Buenos Aires.</p>
+                    <p>En Ferrocarril:<br>En tren se llega a la Estación Terminal Ferroautomotora María Eva Duarte de Perón. El viaje desde la Estación
+                        Constitución tiene una duración de 6 horas aproximadamente</p>
+                    <p>En Micros de larga distancia:<br>Los ómnibus de larga distancia llegan a la Estación Terminal Ferroautomotora María Eva Duarte de Perón. El
+                        viaje desde la Estación Terminal de Retiro tiene una duración de 5 horas aproximadamente.</p>
+                    <p>En Avión:<br>Por vía aérea se arriba al Aeropuerto Internacional Ástor Piazzolla. El vuelo desde la Ciudad Autónoma de
+                        Buenos Aires tiene una duración de 45 minutos.</p>
+                    <p>En automóvil:<br>La Autovía 2 conecta La Ciudad Autónoma de Buenos Aires con Mar del Plata en cinco horas, aproximadamente.
+                        Las rutas 11, 88 y 226 también vinculan Mar del Plata con Buenos Aires y el resto del país.</p>
+                </div>
             </div>
-        </section>
-        <section id="info-hoteles">
-            <div class="img-info3">
-                <img src="imagenes/hoteles.jpeg" alt="Hoteles" width="270px" height="150px">
+        </div>  
+        <div class="split-info"></div>
+        <div class="row">
+            <div class="col-4">
+                <img src="imagenes/hoteles.jpeg" alt="Hoteles" width="270px" height="170px">
             </div>
-            <div class="text-info3">
-                <h4>Hoteles</h4>
-                <p>El sector hotelero representa uno de los componentes de mayor importancia en el concierto del equipamiento
+            <div class="col-8">
+                <h4 class="titulo-informacion">Hoteles</h4>
+                <p class="texto-info">El sector hotelero representa uno de los componentes de mayor importancia en el concierto del equipamiento
                     turístico marplatense y ofrece servicios que en calidad y variedad marchan acordes con los principales
                     centros urbanos y vacacionales del país.<br>En Mar del Plata todos encuentran su lugar. La oferta comprende todas las modalidades de alojamiento y dentro
                     de cada una de ellas, la accesibilidad para todo presupuesto.<br>Se puede optar, entre otras opciones, por hotelería de 1 a 5 estrellas, apart hoteles, clubes de playa,
                     cabañas, hosterías y establecimientos rurales.</p>
             </div>
-        </section>
-        <section id="info-movilidad">
-            <div class="img-info4">
-                <img src="imagenes/bondi.jpeg" alt="Movilidad" width="270px" height="150px">
+        </div>
+        <div class="split-info"></div>
+        <div class="row">
+            <div class="col-4">
+                <img src="imagenes/bondi.jpeg" alt="Movilidad" width="270px" height="170px">
             </div>
-            <div class="text-info4">
-                <h4>Movilidad</h4>
-                <p>El Sistema Único de Boleto Electrónico, más conocido como SUBE, es el sistema implementado en Mar del Plata,
+            <div class="col-8">
+                <h4 class="titulo-informacion">Movilidad</h4>
+                <p class="texto-info">El Sistema Único de Boleto Electrónico, más conocido como SUBE, es el sistema implementado en Mar del Plata,
                 que permite a cada usuario con su respectiva tarjeta, abonar los viajes en todas las líneas de colectivos,
                 tanto urbanas como interurbanas, excepto la 221, que se paga en efectivo.<br>Numerosas empresas de taxis y remises ofrecen sus servicios que tienden a brindar la mayor calidad de
                 atención y servicio al cliente.<br>A las clásicas caminatas por diferentes lugares de la ciudad se suma la posibilidad de recorrerlos en
                 bicicleta. Diferentes empresas ofrecen el servicio de alquiler de bicicletas y accesorios como candados,
                 cascos, etc.<br>Diferentes agencias de alquiler de autos se suman a la oferta de medios de transporte de la ciudad.</p>
-        </div>
-        </section>
-        <section id="Accesibilidad">
-            <div class="img-info5">
-                <img src="imagenes/info-acces.jpeg" alt="Accesibilidad" width="270px" height="150px">
             </div>
-            <div class="text-info5">
-                <h4>Servicios Turísticos Accesibles 2022</h4>
-                <p>Mar del Plata se encuentra trabajando para promover más y mejores servicios accesibles para todas las
+        </div>
+        <div class="split-info"></div>
+        <div class="row">
+            <div class="col-4">
+                <img src="imagenes/info-acces.jpeg" alt="Accesibilidad" width="270px" height="170px">
+            </div>
+            <div class="col-8">
+                <h4 class="titulo-informacion">Servicios Turísticos Accesibles 2022</h4>
+                <p class="texto-info">Mar del Plata se encuentra trabajando para promover más y mejores servicios accesibles para todas las
                 personas.<br>En diversas paginas se puede encontrar las guías que incluye información necesaria para que los usuarios con
                 comunicación o movilidad reducida puedan consultar al visitar nuestro destino.</p>
             </div>
+        </div>
         </section>
     </main>
      <!-- FOOTER -->
