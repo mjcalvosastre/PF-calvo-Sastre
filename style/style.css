@@ -251,7 +251,8 @@ ACTIVIDADES
         display: block !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        width: 50% !important;
+        width: 400px !important;
+        height: 300px !important;
     }
 }
 /*
@@ -272,6 +273,8 @@ HISTORIA
     line-height: 28px;
     margin-top: 2.0rem;
     margin-bottom: 2.0rem;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 .img-historia1,
 .img-historia2,
@@ -354,7 +357,8 @@ NOTICIAS
   @media (max-width: 1020px){
     .noticias{
         display: flex !important;
-        flex-direction: column;   
+        flex-direction: column !important;
+        justify-content: center;
     }
 
   }
